@@ -7,10 +7,12 @@ import { PokeapiService } from './pokeapi.service'
 	styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+	title = 'Angular Pokedex';
+	subtitle = 'Courtesy of https://pokeapi.co/'
+
 	constructor(private pokeService: PokeapiService) { }
 
 	getSelectedPokemon() {
 		return this.pokeService.selectedPokemon
 	}
-	title = 'pd works!';
 }
