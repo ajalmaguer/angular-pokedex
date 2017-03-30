@@ -23,4 +23,16 @@ export class ListComponent implements OnInit {
 		)
 	}
 
+	getDetails(pokemon) {
+		console.log(pokemon)
+		this.pokeService.getPokeDetails(pokemon).subscribe(
+			res => {
+				console.log('res =', res)
+				this.pokeService.selectedPokemon = res
+			}, err => {
+				console.log('err =', err)
+			}
+		)
+	}
+
 }

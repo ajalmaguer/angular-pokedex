@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
+import { PokeapiService } from './pokeapi.service'
 
 @Component({
-  selector: 'pd-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+	selector: 'pd-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pd works!';
+	constructor(private pokeService: PokeapiService) { }
+
+	getSelectedPokemon() {
+		return this.pokeService.selectedPokemon
+	}
+	title = 'pd works!';
 }

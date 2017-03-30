@@ -7,11 +7,13 @@ import { PokeapiService } from './pokeapi.service';
 
 import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListComponent
+    ListComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
